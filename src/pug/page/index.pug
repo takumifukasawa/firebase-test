@@ -5,8 +5,28 @@ prepend config-block
 
 //- append stylesheet-block
 
-//- append javascript-block
+prepend javascript-block
+  script(src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js")
+  script.
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBshytYFQuiJrDS0sZ20u7_EyJ9K3RVvFk",
+      authDomain: "fir-test-82072.firebaseapp.com",
+      databaseURL: "https://fir-test-82072.firebaseio.com",
+      projectId: "fir-test-82072",
+      storageBucket: "",
+      messagingSenderId: "973803287387"
+    };
+    firebase.initializeApp(config);
 
 block content-block
-  .sample-icon
-  | hello, world!
+  .register-todo
+    p
+      | title
+      input.register-todo__title.js-register-todo-title(type="text")
+    p
+      button.register-todo__submit.js-register-todo-submit(type="button")
+        | register
+  hr
+  .todos.js-todos
+

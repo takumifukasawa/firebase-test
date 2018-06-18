@@ -3,3 +3,22 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
+.register-todo__title {
+  border: 1px solid #ccc;
+}
+
+.register-todo__submit {
+  border: 1px solid #ccc;
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo__delete {
+  border: 1px solid #ccc;
+  margin-left: 8px;
+}
